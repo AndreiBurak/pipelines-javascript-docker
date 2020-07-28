@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: andreiburakpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: andreiburakpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: andreiburakpipelinesjavascriptdocker 
+          image: burancontainerreg.azurecr.io/andreiburakpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
